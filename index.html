@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>P-Ticket</title>
+     <link rel="shortcut icon" href="pictures/bus-icon.png" type="image/x-icon">
+     <!-- tailwind & daisy ui cdn -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.tailwindcss.com"></script>
+     <!-- Google font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     <!-- gogle font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+     <!-- style start -->
+     <style>
+          .Raleway{
+               font-family: "Raleway", sans-serif;
+          }
+          .inter-font{
+               font-family: "Inter", sans-serif;
+
+          }
+     </style>
+</head>
+<body class="Raleway lg:container lg:mx-auto">
+     <header class="">
+          <!-- nav ber start -->
+          <nav>
+               <div class="navbar bg-base-100">
+                    <div class="navbar-start">
+                      <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                        </div>
+                        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                          <li><a>Home</a></li>
+                          <li><a>About</a></li>
+                          <li><a>Destination</a></li>
+                          <li><a>Search</a></li>
+                        </ul>
+                      </div>
+                      <a class="btn btn-ghost text-2xl font-extrabold text-black">P-Ticket</a>
+                    </div>
+                    <div class="navbar-center hidden lg:flex">
+                      <ul class="menu menu-horizontal px-1">
+                         <li><a>Home</a></li>
+                          <li><a>About</a></li>
+                          <li><a>Destination</a></li>
+                          <li><a>Search</a></li>
+                      </ul>
+                    </div>
+                    <div class="navbar-end">
+             <a class="btn bg-[#1DD1001A] text-lime-500 font-bold">Bus <span>
+               <img src="pictures/bus-icon.png" alt="">
+             </span></a>
+                    </div>
+                  </div>
+          </nav>
+          <!-- nav ber end -->
+          <!-- header section start -->
+          <section class="mb-5 relative ">
+       <div class="hero min-h-[560px] bg-cover object-contain rounded-2xl  bg-no-repeat " style="background-image: url(pictures/banner.png); ">
+                    <div class="hero-overlay bg-opacity-60  rounded-2xl"></div>
+                    <div class="hero-content text-center text-neutral-content">
+                      <div class="max-w-[704px]">
+                        <h1 class="mb-5 text-6xl font-extrabold text-white">End-to-End Travel with<span class="text-[#1DD100]"> F Paribahan</span></h1>
+                        <p class="mb-5">Traveling from one destination to another can be a daunting task, especially when you have to deal with multiple transportation providers, ticket bookings, and itinerary planning. This is where P Paribahan steps in to revolutionize your travel experience.</p>
+                        <button class="btn bg-[#1DD100] text-black border-none">Buy Tickets</button>
+                      </div>
+                    </div>
+                  </div>
+
+          </section>
+          <!-- header section end -->
+          <section class=" mb-5">
+         <section class=" lg:flex gap-3  lg:absolute lg:translate-x-[28%] lg:-translate-y-20    ">
+          <div class=" border-b-4 border-b-[#1DD100] rounded-xl flex gap-4 justify-center items-center bg-slate-200 mb-3">
+              <img src="./pictures/people.png" alt="">
+              <div class="p-3">
+              <h2 class="text-5xl font-bold text-black inter-font">500K+</h2>
+              <h4 class="text-xl text-gray-500">Registered users</h4>
+          </div>
+          </div>
+          <div class=" border-b-4 bg-slate-200 border-b-[#1DD100] rounded-xl flex gap-4 justify-center items-center mb-3 ">
+              <img src="./pictures/ticket-cupon.png" alt="">
+              <div class="p-3">
+              <h2 class="text-5xl font-bold text-black inter-font">1.7 lacks</h2>
+              <h4 class="text-xl text-gray-500">Tickets sold</h4>
+          </div>
+          </div>
+          <div class= "border-b-4 bg-slate-200 border-b-[#1DD100] rounded-xl flex gap-4 justify-center items-center mb-3">
+              <img src="./pictures/stoppage.png" alt="">
+              <div class="p-3">
+              <h2 class="text-5xl font-bold text-black inter-font">80K+</h2>
+              <h4 class="text-xl text-gray-500">Rental partners</h4>
+          </div>
+          </div>
+         </section>
+     </section>
+     </header>
+
+     <main>
+          <section class="my-16"> 
+               <h1 class="text-5xl font-extrabold text-center mb-3">Best offers for you</h1>
+          </section>
+          <!-- cupon section -->
+          <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+               <div class="card lg:w-full bg-[#FFBF0F] text-primary-content">
+                    <div class=" grid grid-cols-3">
+                         <div class=" flex flex-col justify-center pl-6 flex-1  w-52">
+                              <h2 class="text-3xl text-black inter-font font-extrabold">15% OFF</h2>
+                              <p><strong class="text-black">on your next purchase</strong>
+                                   <br>
+                                   <span class="text-black">use by January 2024</span></p>
+                         </div>
+                          <div class="p-0  ml-8 lg:ml-32"><img src="./pictures/cupon-devider.png" alt=""></div>
+                          <div class="  flex flex-col justify-center  flex-1   lg:p-10">
+                             <h1 class="text-3xl text-black font-extrabold items-center">NEW15</h1>
+                              <h4 class="text-black">Coupon Code</h4>
+                          </div>
+
+                     
+                    </div>
+                  </div>
+               <div class="card lg:w-full bg-[#F78C9C] text-primary-content">
+                    <div class=" grid grid-cols-3">
+                         <div class=" flex flex-col justify-center pl-6 flex-1  w-52">
+                              <h2 class="text-3xl text-black inter-font font-extrabold">20% OFF</h2>
+                              <p><strong class="text-black">on your next purchase</strong>
+                                   <br>
+                                   <span class="text-black">use by January 2024</span></p>
+                         </div>
+                          <div class="p-0  ml-8 lg:ml-32"><img src="./pictures/cupon-devider.png" alt=""></div>
+                          <div class=" lg:w-60 flex flex-col justify-center  flex-1   lg:p-10">
+                             <h1 class="text-3xl text-black font-extrabold items-center">Couple 20</h1>
+                              <h4 class="text-black">Coupon Code</h4>
+                          </div>
+
+                     
+                    </div>
+                  </div>
+          </section>
+          <!-- cupon section end -->
+
+
+     </main>
+     <footer>
+
+     </footer>
+     
+</body>
+</html>
