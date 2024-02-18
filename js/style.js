@@ -10,25 +10,26 @@ for(const sit of sits){
      sit.addEventListener('click',function(event){
           isCheck = true ;
           
-          
-          
-          
           sit.classList.add('bg-[#1DD100]');
           const selectedPart = document.getElementById('selected');
           selectedPart.classList.add('text-[#1DD100]');
           seatsLeft = seatsLeft -1 ;
-          const leftSit = document .getElementById('left-sit');
-          leftSit.innerText= seatsLeft ;
           
 
+          //
+          
+          
+          // 
+
+          const leftSit = document .getElementById('left-sit');
+          leftSit.innerText= seatsLeft ;
           seatsCount = seatsCount + 1 ;
           const space = document.getElementById('seatCount');
           space.innerText = seatsCount ;
-          
 
+
+          // 
           const text = event.target.innerText;
-          
-          
           const sitsDisplay = document.getElementById('sits-display');
           const p1 = document.createElement('p');
           p1.innerText = text ;
@@ -47,25 +48,28 @@ for(const sit of sits){
           const grandPrice = document.getElementById('grand-price');
           grandPrice.innerText = totalPrice ;
 
-          
+          if(seatsCount===4){
+               const applybtn = document.getElementById('apply-btn');
+               applybtn.removeAttribute('disabled')
+               
+               
+               
+               
+               
+              }
+              else if( seatsCount >=4) {
+                 
+               
+                alert ('you can select only 4 seat! please refresh & select !')
+                
+               
+              }
+      
 
          
-         if(seatsCount==4){
-          const applybtn = document.getElementById('apply-btn');
-          applybtn.removeAttribute('disabled')
-          
-          
-         }
-         else if( seatsCount >4) {
          
-          
-          
-          
-          alert ('you can select only 4 seat! please refresh & select !')
-          
+         
 
-
-         }
           
 
           
@@ -124,6 +128,8 @@ element.addEventListener('change',function(event){
                const element = document.getElementById('next-btn');
           element.removeAttribute('disabled')
           }
+
+          event.target.value = '';
           
          
           
