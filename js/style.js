@@ -94,7 +94,7 @@ const applyBtn = document.getElementById('apply-btn');
 applyBtn.addEventListener('click',function(){
      const inputPlace = document.getElementById('cupon-input');
      const inputValue = inputPlace.value;
-     const value = inputValue.split(' ').join('').toUpperCase();
+     const value = inputValue;
      console.log(value);
      if(value === 'NEW15'){
           const element = document.getElementById('discount-price');
@@ -106,7 +106,7 @@ applyBtn.addEventListener('click',function(){
           inputPlace.classList.add('hidden');
           applyBtn.classList.add('hidden')
      }
-     else if(value ==='COUPLE20'){
+     else if(value ==='Couple 20'){
           const element = document.getElementById('discount-price');
           const discount = totalPrice * 0.2 ;
           element.innerText=discount;
