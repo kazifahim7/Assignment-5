@@ -9,7 +9,7 @@ let isSelected = true ;
 const sits =document.querySelectorAll('.main-btn');
 
 for(const sit of sits){
-     sit.addEventListener('click',function(event){
+     sit.addEventListener('click',function allButtons (event){
           isCheck = true ;
 
          
@@ -32,27 +32,18 @@ for(const sit of sits){
                const applybtn = document.getElementById('apply-btn');
                applybtn.removeAttribute('disabled')  
               }
-              else if( seatsCount >=4 ) {
-               
-
-               
+              else if( seatsCount >4) {     
+               leftSit.innerText= 36 ;
                seatsCount=seatsCount -1;
                space.innerText = seatsCount ;
-               sit.setAttribute('disabled',true);
-               
-               
-               
-                alert ('you can select only 4 seat! please refresh & select !')
-                sitsDisplay.removeChild(p1);
-               sitsDisplay.removeChild(p2);
-               sitsDisplay.replaceChild(p3)
+               sit.classList.remove('bg-[#1DD100]');  
+                alert ('you can select only 4 seat!')
+                return ;
+                
                
               }
 
          
-
-
-          // 
           const text = event.target.innerText;
           const sitsDisplay = document.getElementById('sits-display');
           const p1 = document.createElement('p');
@@ -65,6 +56,7 @@ for(const sit of sits){
           p3.innerText = ticketPrice ;
 
           sitsDisplay.appendChild(p3);
+          
 
           
 
@@ -81,16 +73,14 @@ for(const sit of sits){
           
      
      
-
-         
-      
-
-         
+               // after one click remove event; 
+          sit.removeEventListener('click', allButtons)
          
          
 
           
      })
+    
    
     
 }
@@ -163,6 +153,9 @@ document.getElementById('next-btn').addEventListener('click',function(){
 document.getElementById('continue-button').addEventListener('click',function(){
      window.location.reload();
 })
+
+
+
 
 
 
