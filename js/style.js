@@ -33,9 +33,13 @@ for(const sit of sits){
                applybtn.removeAttribute('disabled')  
               }
               else if( seatsCount >=4) {
+               sit.setAttribute('disabled',true);
+               
                
                 alert ('you can select only 4 seat! please refresh & select !')
-                
+                sitsDisplay.removeChild(p1);
+               sitsDisplay.removeChild(p2);
+               sitsDisplay.replaceChild(p3)
                
               }
 
@@ -72,6 +76,11 @@ for(const sit of sits){
 
           const grandPrice = document.getElementById('grand-price');
           grandPrice.innerText = totalPrice ;
+
+
+          
+     
+     
 
          
       
@@ -123,7 +132,7 @@ applyBtn.addEventListener('click',function(){
           alert('please enter a valid coupon code');
      }
 
-
+     
     
 
 
@@ -158,6 +167,11 @@ document.getElementById('next-btn').addEventListener('click',function(){
 document.getElementById('continue-button').addEventListener('click',function(){
      window.location.reload();
 })
+
+
+
+
+ 
 
      
      
