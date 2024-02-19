@@ -34,6 +34,9 @@ for(const sit of sits){
               }
               else if( seatsCount >=4) {
                sit.setAttribute('disabled',true);
+               seatsCount=seatsCount -1;
+               space.innerText = seatsCount ;
+               
                
                
                 alert ('you can select only 4 seat! please refresh & select !')
@@ -57,14 +60,6 @@ for(const sit of sits){
           sitsDisplay.appendChild(p2)
           const p3 =  document.createElement('p');
           p3.innerText = ticketPrice ;
-
-              if(seatsCount===5){
-               sit.setAttribute('disabled', true)
-               sitsDisplay.removeChild(p1);
-               sitsDisplay.removeChild(p2);
-               sitsDisplay.replaceChild(p3)
-              }
-
 
           sitsDisplay.appendChild(p3);
 
