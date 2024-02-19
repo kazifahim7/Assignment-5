@@ -3,6 +3,7 @@ let seatsCount = 0 ;
 let ticketPrice = 550 ;
 let totalPrice = 0 ;
 let isCheck = false ;
+let isSelected = false
 
 const sits =document.querySelectorAll('.main-btn');
 
@@ -27,6 +28,19 @@ for(const sit of sits){
           const space = document.getElementById('seatCount');
           space.innerText = seatsCount ;
 
+          if(seatsCount===4){
+               const applybtn = document.getElementById('apply-btn');
+               applybtn.removeAttribute('disabled')  
+              }
+              else if( seatsCount >=4) {
+               
+                alert ('you can select only 4 seat! please refresh & select !')
+                
+               
+              }
+
+         
+
 
           // 
           const text = event.target.innerText;
@@ -39,7 +53,18 @@ for(const sit of sits){
           sitsDisplay.appendChild(p2)
           const p3 =  document.createElement('p');
           p3.innerText = ticketPrice ;
+
+              if(seatsCount===5){
+               sit.setAttribute('disabled', true)
+               sitsDisplay.removeChild(p1);
+               sitsDisplay.removeChild(p2);
+               sitsDisplay.replaceChild(p3)
+              }
+
+
           sitsDisplay.appendChild(p3);
+
+         
 
           totalPrice = totalPrice + ticketPrice ;
           const currentPrice = document.getElementById('total-price');
@@ -48,33 +73,22 @@ for(const sit of sits){
           const grandPrice = document.getElementById('grand-price');
           grandPrice.innerText = totalPrice ;
 
-          if(seatsCount===4){
-               const applybtn = document.getElementById('apply-btn');
-               applybtn.removeAttribute('disabled')
-               
-               
-               
-               
-               
-              }
-              else if( seatsCount >=4) {
-                 
-               
-                alert ('you can select only 4 seat! please refresh & select !')
-                
-               
-              }
+         
       
 
          
          
          
-
-          
+        
 
           
      })
+   
+    
 }
+
+
+
 
 const applyBtn = document.getElementById('apply-btn');
 
@@ -110,8 +124,7 @@ applyBtn.addEventListener('click',function(){
      }
 
 
-     window.location.reload();
-
+    
 
 
 })
@@ -129,7 +142,7 @@ element.addEventListener('change',function(event){
           element.removeAttribute('disabled')
           }
 
-          event.target.value = '';
+          
           
          
           
@@ -142,6 +155,9 @@ document.getElementById('next-btn').addEventListener('click',function(){
 })
 
 
+document.getElementById('continue-button').addEventListener('click',function(){
+     window.location.reload();
+})
 
      
      
