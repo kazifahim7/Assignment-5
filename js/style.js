@@ -3,39 +3,42 @@ let seatsCount = 0 ;
 let ticketPrice = 550 ;
 let totalPrice = 0 ;
 let isCheck = false ;
-let isSelected = false
+let isSelected = true ;
+
 
 const sits =document.querySelectorAll('.main-btn');
 
 for(const sit of sits){
      sit.addEventListener('click',function(event){
           isCheck = true ;
-          
+
+         
+
+        
           sit.classList.add('bg-[#1DD100]');
           const selectedPart = document.getElementById('selected');
           selectedPart.classList.add('text-[#1DD100]');
           seatsLeft = seatsLeft -1 ;
           
 
-          //
-          
-          
-          // 
+         
 
           const leftSit = document .getElementById('left-sit');
           leftSit.innerText= seatsLeft ;
           seatsCount = seatsCount + 1 ;
           const space = document.getElementById('seatCount');
           space.innerText = seatsCount ;
-
           if(seatsCount===4){
                const applybtn = document.getElementById('apply-btn');
                applybtn.removeAttribute('disabled')  
               }
-              else if( seatsCount >=4) {
-               sit.setAttribute('disabled',true);
+              else if( seatsCount >=4 ) {
+               
+
+               
                seatsCount=seatsCount -1;
                space.innerText = seatsCount ;
+               sit.setAttribute('disabled',true);
                
                
                
@@ -63,6 +66,8 @@ for(const sit of sits){
 
           sitsDisplay.appendChild(p3);
 
+          
+
          
 
           totalPrice = totalPrice + ticketPrice ;
@@ -83,7 +88,6 @@ for(const sit of sits){
          
          
          
-        
 
           
      })

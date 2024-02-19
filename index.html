@@ -30,7 +30,7 @@
           }
      </style>
 </head>
-<body class="Raleway  lg:container lg:mx-auto ">
+<body class="Raleway  lg:container mx-auto ">
      <header id="header-section-3" class="  ">
           <!-- nav ber start -->
           <nav>
@@ -174,7 +174,7 @@
 
           <!-- task section 1 -->
 
-          <section class="mb-5">
+          <section class="mb-5  ">
                <div class="card  bg-[#FFFFFF] text-primary-content">
                     <div class="flex flex-col lg:flex-row gap-5 lg:gap-24">
                          <div class="">
@@ -354,7 +354,7 @@
                          <button class="btn main-btn p-4">J  1</button>
                          <button class="btn main-btn p-4">J  2</button>
                          <button class="btn main-btn p-4">J  3</button>
-                         <button onclick="handleClick()" class="btn main-btn p-4">J  4</button>
+                         <button  class="btn main-btn p-4">J  4</button>
                          
 
                     </div>
@@ -363,12 +363,12 @@
                   </div>
                   <!-- calculation section -->
 
-                  <div class="mt-3  border-l-2 border-dashed pl-8 pr-8 lg:pr-0">
+                  <div class="mt-3  border-l-2 border-dashed border-[#1DD100] pl-8 pr-8 lg:pr-0">
                     <div class="card p-5 bg-white shadow-xl">
                          <h1 class=" text-3xl font-bold text-black border-b-2 border-dashed pb-6 mb-4">Select Your Seat</h1>
                          <div>
                               <div class="grid grid-cols-3 lg:gap-x-36 justify-between p-6">
-                                   <h2 class="text-black inter-font text-xl">Seat <span class="bg-[#1DD100] text-white rounded-lg" id="seatCount">0</span></h2>
+                                   <h2 class="text-black inter-font text-xl">Seat <span class="bg-[#1DD100] text-white rounded-xl" id="seatCount">0</span></h2>
                                    <h2 class="text-black text-xl">class</h2>
                                    <h2 class="text-black text-xl">price</h2>
                               </div>
@@ -386,9 +386,9 @@
                     <h1 class="text-1xl font-bold text-black">Discount Price</h1>
                                    <h1 class="text-1xl font-bold text-black">BDT <span id="discount-price" class="inter-font">0</span></h1>
                               </div>
-                             <div class="flex">
-                              <input type="text" id="cupon-input" class="w-full bg-slate-300 p-3 rounded-lg" placeholder="Have any copupon?">
-                              <button id="apply-btn" class="btn btn-apply bg-[#1DD100] " disabled>Apply</button>
+                             <div class="flex justify-end gap-2">
+                              <input type="text" id="cupon-input" class="w-full bg-slate-300 p-3 rounded-lg " placeholder="Have any copupon?">
+                              <button id="apply-btn" class="btn btn-apply bg-[#1DD100] absolute  " disabled>Apply</button>
 
                              </div>
                              
@@ -409,6 +409,7 @@
                          <br>
                          <span id="input-number" class="text-1xl font-bold text-black"> Phone Number:</span> <br>
                          <input type="number" class=" p-5 w-full bg-slate-100 rounded-lg inter-font" placeholder="Enter your number" id="number-feild">
+                         <p class="text-red-500">must be enter a valid number!</p>
                          <br>
                          <span class="text-1xl font-bold text-black"> Email ID:</span> <br>
                          <input type="email"  class="p-5 w-full bg-slate-100 rounded-lg" placeholder="Enter your email id">
