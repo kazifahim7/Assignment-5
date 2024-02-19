@@ -148,9 +148,6 @@ element.addEventListener('change',function(event){
 
           
           
-         
-          
-
 })
 
 document.getElementById('next-btn').addEventListener('click',function(){
